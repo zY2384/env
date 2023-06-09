@@ -6,17 +6,17 @@ on:
 
  
 jobs:
-  build-kernel:
+  print-env:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: print
         run: |
-        echo "======环境变量1:"
-        sudo echo $PATH
-        echo "=======环境变量2:"
-        sudo ls /usr/bin/
-        echo "======软件安装列表:"
-        sudo apt list
-        echo "======软件源:"
-        sudo cat /etc/apt/sources.list
+          echo "======环境变量1:"
+          echo $PATH
+          echo "=======环境变量2:"
+          sudo ls /usr/bin/
+          echo "======软件安装列表:"
+          sudo apt list
+          echo "======软件源:"
+          sudo cat /etc/apt/sources.list
